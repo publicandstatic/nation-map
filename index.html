@@ -26,28 +26,20 @@
     <link href="https://icons.getbootstrap.com/assets/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="css/app.css" rel="stylesheet">
 </head>
-<!-- Google Tag Manager -->
-<script>(function (w, d, s, l, i) {
-    w[l] = w[l] || [];
-    w[l].push({
-        'gtm.start':
-            new Date().getTime(), event: 'gtm.js'
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXX');
+    gtag('event', 'page_view', {
+        page_title: 'Test 123',
+        page_location: 'https://example.com/test123',
+        page_path: '/test123'
     });
-    var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
-    j.async = true;
-    j.src =
-        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-    f.parentNode.insertBefore(j, f);
-})(window, document, 'script', 'dataLayer', 'GTM-TJQSPC87');</script>
-<!-- End Google Tag Manager -->
+</script>
 <body data-bs-theme="dark">
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TJQSPC87"
-            height="0" width="0" style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
 <div class="container my-4">
     <div class="header">
         <h1>NATION MAP</h1>
