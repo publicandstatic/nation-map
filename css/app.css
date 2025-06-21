@@ -1,7 +1,7 @@
 body {
     font-family: 'Play';
     text-rendering: optimizeLegibility;
-    background-color: #22A8CB;
+    background-color: rgb(34, 168, 203);
 }
 
 #background-сanvas {
@@ -21,7 +21,7 @@ body {
 .header {
     text-align: center;
     padding: 20px;
-    color: #263238;
+    color: rgb(62, 71, 95);
 }
 
 .header h1 {
@@ -43,7 +43,7 @@ body {
     margin-left: 10px;
     border: none;
     background: #F7F619;
-    color: #263238;
+    color: rgb(62, 71, 95);
     border-radius: 5px;
     cursor: pointer;
 }
@@ -60,7 +60,7 @@ body {
     position: relative;
     width: 400px;
     height: 400px;
-    color: #263238;
+    color: rgb(62, 71, 95);
     background: rgba(62, 71, 95, 0.5);
 }
 
@@ -75,7 +75,7 @@ body {
             repeating-linear-gradient(
                     to bottom, #ddd, #ddd 1px, transparent 1px, transparent 10%
             );
-    border: 3px solid #000;
+    border: 3px solid rgb(31,34,44);
 }
 
 /* Центральна вертикальна вісь */
@@ -135,10 +135,10 @@ body {
     width: 300px;
     background: white;
     padding: 20px;
-    border: 3px solid #000;
+    border: 3px solid rgb(31,34,44);
     border-radius: 10px;
     box-shadow: 0 0 10px #ccc;
-    color: #263238;
+    color: rgb(62, 71, 95);
 }
 
 .panel h2 {
@@ -148,7 +148,7 @@ body {
 
 .note {
     font-size: 13px;
-    color: gray;
+    color: rgb(62, 71, 95);
     margin-bottom: 10px;
 }
 
@@ -179,7 +179,7 @@ body {
 .placement {
     margin-top: 12px;
     font-size: 14px;
-    color: #333;
+    color: rgb(31,34,44);
     display: none;
 }
 
@@ -187,12 +187,12 @@ body {
     z-index: 100;
 }
 #hamburger {
-    background-color: #3e475f;
+    background-color: rgb(62, 71, 95);
     color: #FFFFFF;
 }
 
 #hamburger:hover, #hamburger:active {
-    background-color: #3e475f;
+    background-color: rgb(62, 71, 95);
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
@@ -230,7 +230,7 @@ border-color: var(--bs-btn-hover-border-color);
 a {
     text-decoration: none;
     position: relative;
-    color: #22A8CB;
+    color: rgb(34, 168, 203);
     font-size: 1em;
 }
 
