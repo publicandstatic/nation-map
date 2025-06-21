@@ -253,3 +253,9 @@ a:hover::after {
     width: 1em;
     padding-bottom: 3px;
 }
+
+.zbir {
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+}
