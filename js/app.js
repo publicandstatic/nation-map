@@ -140,6 +140,7 @@ function generate() {
         avatar.src = 'https://unavatar.io/twitter';
     };
 
+    updateBorderColor(proYTop, proYBottom, proXLeft, proXRight);
     document.getElementById('yTop-bar').style.width = `${proYTop}%`;
     document.getElementById('yTop-placement').innerText = `${proYTop}%`;
     document.getElementById('yBottom-bar').style.width = `${proYBottom}%`;
@@ -153,3 +154,34 @@ function generate() {
     placement.style.display = `block`;
 }
 
+
+function updateBorderColor(proYTop, proYBottom, proXLeft, proXRight) {
+    const borders = {
+        proYTop:    '#107C10',
+        proYBottom: '#003791',
+        proXLeft:   '#6e6e6e',
+        proXRight:  '#E60012'
+    };
+
+    const values = {
+        proYTop,
+        proYBottom,
+        proXLeft,
+        proXRight
+    };
+
+    // Знаходимо ключ з максимальним значенням
+    const dominantKey = Object.keys(values).reduce((a, b) => values[a] > values[b] ? a : b);
+
+    // Отримуємо відповідний колір
+    const dominantColor = borders[dominantKey];
+
+    // Застосовуємо колір до рамок
+    // document.getElementById('map').style.borderColor = dominantColor;
+    // document.getElementById('stats').style.borderColor = dominantColor;
+
+    const fills = document.querySelectorAll('.fill');
+    fills.forEach(el => {
+        el.style.backgroundColor = dominantColor;
+    });
+}
