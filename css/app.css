@@ -1,0 +1,255 @@
+body {
+    font-family: 'Play';
+    text-rendering: optimizeLegibility;
+    background-color: #22A8CB;
+}
+
+#background-сanvas {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(150px);
+    -webkit-filter: blur(150px);
+    -moz-filter: blur(150px);
+    -o-filter: blur(150px);
+    -ms-filter: blur(150px);
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    color: #263238;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.header input {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.header button {
+    padding: 5px;
+    font-size: 16px;
+    margin-left: 10px;
+    border: none;
+    background: #F7F619;
+    color: #263238;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+}
+
+.map-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    color: #263238;
+    background: rgba(62, 71, 95, 0.5);
+}
+
+.map {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background:
+            repeating-linear-gradient(
+                    to right, #ddd, #ddd 1px, transparent 1px, transparent 10%
+            ),
+            repeating-linear-gradient(
+                    to bottom, #ddd, #ddd 1px, transparent 1px, transparent 10%
+            );
+    border: 3px solid #000;
+}
+
+/* Центральна вертикальна вісь */
+.map::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 10px;
+    height: 100%;
+    background: white;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+/* Центральна горизонтальна вісь */
+.map::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 10px;
+    background: white;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+
+.label {
+    position: absolute;
+    background: #fff;
+    padding: 3px 6px;
+    font-size: 13px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    z-index: 10;
+}
+
+.label.top { top: 0; left: 50%; transform: translateX(-50%); }
+.label.bottom { bottom: 0; left: 50%; transform: translateX(-50%); }
+.label.left { left: 0; top: 50%; transform: translateY(-50%); }
+.label.right { right: 0; top: 50%; transform: translateY(-50%); }
+
+.avatar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #3e475f;
+    background: #fff;
+    display: none;
+}
+
+.panel {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #ccc;
+    color: #263238;
+}
+
+.panel h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.note {
+    font-size: 13px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.bar-group {
+    margin-bottom: 12px;
+}
+
+.bar-group span {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.bar {
+    background: #eee;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #22A8CB;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+.placement {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #333;
+    display: none;
+}
+
+.dropdown-center {
+    z-index: 100;
+}
+#hamburger {
+    background-color: #3e475f;
+    color: #FFFFFF;
+}
+
+#hamburger:hover, #hamburger:active {
+    background-color: #3e475f;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.dropdown-menu {
+    --bs-dropdown-bg: #3e475f;
+}
+.dropdown-item {
+    --bs-dropdown-link-color: #FFFFFF;
+    --bs-dropdown-link-active-bg: rgba(31, 34, 44, 0.5);
+    --bs-dropdown-link-active-color: #FFFFFF;
+    --bs-dropdown-link-hover-bg: #1f222c;
+    --bs-dropdown-link-hover-color: #FFFFFF;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    color: var(--bs-dropdown-link-hover-color) !important;
+    background-color: var(--bs-dropdown-link-hover-bg) !important;
+}
+
+.url {
+    margin-top: 1.25em;
+    margin-bottom: 1.25em;
+}
+
+.btn-outline-light {
+    --bs-btn-color: var(--bs-card-color);
+    --bs-btn-border-color: var(--bs-card-color);
+}
+.btn-outline-light:hover {
+background-color: var(--bs-btn-hover-bg);
+border-color: var(--bs-btn-hover-border-color);
+}
+
+a {
+    text-decoration: none;
+    position: relative;
+    color: #22A8CB;
+    font-size: 1em;
+}
+
+a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+a:hover::after {
+    width: 100%;
+}
+
+.img-fluid {
+    width: 1em;
+    padding-bottom: 3px;
+}

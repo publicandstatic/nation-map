@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NATION MAP PUBLIC and STATIC">
+    <meta name="keywords" content="NATION MAP, Ігри, PUBLIC and STATIC, Паблік, український контент, соціальні мережі">
+    <meta name="author" content="PUBLIC and STATIC">
+    <meta property="og:title" content="NATION MAP PUBLIC and STATIC">
+    <meta property="og:description" content="NATION MAP PUBLIC and STATIC">
+    <meta property="og:image" content="https://publicandstatic.github.io/nation-map/images/letsplay.png">
+    <meta property="og:url" content="https://www.youtube.com/@PUBLICandSTATIC">
+    <meta name="twitter:card" content="https://publicandstatic.github.io/nation-map/images/letsplay.png">
+    <meta name="twitter:title" content="NATION MAP">
+    <meta name="twitter:description" content="NATION MAP PUBLIC and STATIC">
+    <meta name="twitter:image" content="https://publicandstatic.github.io/nation-map/images/letsplay.png">
+
+    <title>NATION MAP</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <link rel="icon" type="image/x-icon" href="images/favicon/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://icons.getbootstrap.com/assets/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+</head>
+<body data-bs-theme="dark">
+<div class="container my-4">
+    <div class="header">
+        <h1>NATION MAP</h1>
+        <input type="text" id="nickname" placeholder="Нікнейм X">
+        <button onclick="generate()">Розрахувати</button>
+    </div>
+
+    <div class="main">
+        <div class="map-container">
+            <div class="map" id="map">
+                <span class="label top">XBOX NATION</span>
+                <span class="label bottom">SONY NATION</span>
+                <span class="label left">PC NATION</span>
+                <span class="label right">NINTENDO NATION</span>
+                <img id="avatar" class="avatar" src="" alt="avatar">
+            </div>
+        </div>
+
+        <div class="panel" id="stats">
+            <h2>NATION БАЛАНС</h2>
+            <div class="bar-group">
+                <span>XBOX NATION <strong id="yTop-placement"></strong></span>
+                <div class="bar"><div class="fill" id="yTop-bar"></div></div>
+            </div>
+            <div class="bar-group">
+                <span>SONY NATION <strong id="yBottom-placement"></strong></span>
+                <div class="bar"><div class="fill" id="yBottom-bar"></div></div>
+            </div>
+            <div class="bar-group">
+                <span>PC NATION <strong id="xLeft-placement"></strong></span>
+                <div class="bar"><div class="fill" id="xLeft-bar"></div></div>
+            </div>
+            <div class="bar-group">
+                <span>NINTENDO NATION <strong id="xRight-placement"></strong></span>
+                <div class="bar"><div class="fill" id="xRight-bar"></div></div>
+            </div>
+            <strong class="placement">Ви на <strong id="placement">#???</strong> місці ГОТІ NATION!</strong>
+        </div>
+    </div>
+<canvas id="background-сanvas"></canvas>
+<div class="dropdown-center position-fixed top-0 start-0 mt-1 ms-1 dropend">
+    <a class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" id="hamburger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+        </svg>
+    </a>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="/links">Посилання</a></li>
+        <li><a class="dropdown-item" href="/curators">Куратори Steam</a></li>
+        <li>
+            <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="https://kuli.com.ua/" target="_blank">КУЛІ</a></li>
+        <li><a class="dropdown-item" href="https://manifest.in.ua/" target="_blank">Маніфест</a></li>
+    </ul>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
