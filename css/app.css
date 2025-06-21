@@ -259,3 +259,10 @@ a:hover::after {
     margin: 20px auto;
     width: fit-content;
 }
+.zbir-text {
+    display: block;
+    margin: 20px auto;
+    width: fit-content;
+    color: rgb(62, 71, 95);
+}
+
